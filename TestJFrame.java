@@ -19,5 +19,5 @@ public class TestJFrame extends JFrame
         setSize(500, 500);
         setLocation(1000, 300);
         setVisible(true);
-    }
+    }    
 }

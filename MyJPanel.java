@@ -1,7 +1,7 @@
 import java.awt.*; //can call all of them
 
 import javax.swing.JButton;
-//import java.awt.Graphics;
+// import java.awt.Graphics;
 import javax.swing.JPanel;
 
 public class MyJPanel extends JPanel
@@ -22,6 +22,8 @@ public class MyJPanel extends JPanel
     {
         super();
         setLayout(new BorderLayout());
+        okButton.addActionListener(new MyOkButtonHandler());
+        cancelButton.addActionListener(e -> System.exit(0));
         add(okButton, BorderLayout.SOUTH);
         add(cancelButton, BorderLayout.EAST);
     }
