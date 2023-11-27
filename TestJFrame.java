@@ -1,4 +1,7 @@
 import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
 //This is a class that makes the jframe. Another way to make this compared to initializing it in the main method file.
@@ -11,6 +14,8 @@ public class TestJFrame extends JFrame
     public TestJFrame() 
     {
         super("TicTacToe Game");
+
+
 
         panel = new JPanel();
         

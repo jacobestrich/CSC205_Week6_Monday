@@ -4,6 +4,9 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 import javax.swing.JButton;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
 public class TicTacToe extends TestJFrame {
@@ -25,6 +28,15 @@ public class TicTacToe extends TestJFrame {
             panel.add(button);
             buttons.add(button);
         }
+        
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menu = new JMenu("Game Options");
+        menuBar.add(menu);
+
+        JMenuItem menuItem = new JMenuItem("Reset Game");
+        menuItem.addActionListener(e -> System.out.println("Reset Game"));
+        menu.add(menuItem);
+        setJMenuBar(menuBar);
 
         setContentPane(panel);
     }
@@ -39,7 +51,7 @@ public class TicTacToe extends TestJFrame {
         if(currentPlayer == "x"){
             button.setBackground(Color.orange);
         } else {
-            button.setBackground(new Color(100, 32, 200));
+            button.setBackground(Color.cyan);
         }
 
         if(WeHaveAWinner()){
