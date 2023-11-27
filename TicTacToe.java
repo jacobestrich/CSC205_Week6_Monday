@@ -28,13 +28,13 @@ public class TicTacToe extends TestJFrame {
             panel.add(button);
             buttons.add(button);
         }
-        
+
         JMenuBar menuBar = new JMenuBar();
         JMenu menu = new JMenu("Game Options");
         menuBar.add(menu);
 
         JMenuItem menuItem = new JMenuItem("Reset Game");
-        menuItem.addActionListener(e -> System.out.println("Reset Game"));
+        menuItem.addActionListener(e -> resetGame());
         menu.add(menuItem);
         setJMenuBar(menuBar);
 
@@ -69,6 +69,18 @@ public class TicTacToe extends TestJFrame {
             currentPlayer = "o";
         } else {
             currentPlayer = "x";
+        }
+    }
+
+    public void resetGame()
+    {
+        currentPlayer = "";
+        for(int i = 0; i < 9; i++)
+        {
+            JButton button = buttons.get(i);
+            button.setEnabled(true);
+            button.setText("");
+            button.setBackground(null);
         }
     }
 
